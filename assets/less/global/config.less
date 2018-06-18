@@ -1,0 +1,84 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// diretorios
+@bg:'../images/bg/';
+@misc:'../images/misc/';
+@svg:'../images/svg/';
+.bg(@x,@y){background:url('@{bg}@{x}') @y;}
+.misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.svg(@x,@y){background:url('@{svg}@{x}') @y;}
+
+// colors
+@primary: #191919;
+@secundary: #b3b3b3;
+@text: #666;
+
+// globals
+body {
+	font-family: 'Open Sans', sans-serif;
+
+	.title {
+		margin-bottom: 15px;
+		font-size: 38px;
+		font-weight: 700;
+		color: @primary;
+		text-align: center;
+	}
+
+	.subtitle {
+		margin-bottom: 50px;
+		font-size: 25px;
+		text-align: center;
+		color: @text;
+	}
+
+	//página de obrigado
+	.thanks {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		.transform(translate3d(0, -50%, 0));
+
+		.title {
+			text-align: left;
+			font-size: 100px;
+		}
+
+		.subtitle {
+			display: block;
+			font-size: 30px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+
+		.title {
+			font-size: 25px;
+		}
+
+		.subtitle {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+
+		.thanks {
+
+			.title {
+				font-size: 16vw;
+			}
+
+			.subtitle {
+				font-size: 5vw;
+			}
+
+			.copy {
+				font-size: 14px;
+			}
+		}
+	}
+}

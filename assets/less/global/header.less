@@ -1,0 +1,90 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+
+
+	&__logo {
+		display: inline-block;
+		width: 225px;
+		height: 70px;
+		.svg('logo.svg', 0 0 no-repeat);
+		text-indent: -999em;
+	}
+
+	&__info {
+		float: right;
+	}
+}
+
+// hover 
+@media only screen and (min-width: 1200px) {
+	
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {
+
+}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+	.header {
+
+		&__logo {
+			display: table;
+			margin: 15px auto;
+		}
+
+		&__phone {
+			float: none;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 999;
+			width: 100%;
+			padding: 10px 15px;			
+			margin-top: 0;
+			background-color: #99d557;	
+			text-align: center;
+
+			.icon--phone {
+				float: left;
+				width: 40px;
+				height: 40px;
+				fill: #fff;
+			}
+
+			.icon--arrow {
+				display: block;
+				float: right;
+				width: 20px;
+				height: 20px;
+				margin: 10px 0;
+				fill: #fff;
+			}
+
+			.caption {
+				margin: 11px 5px 11px 0;
+				color: #fff;
+				font-weight: 400;
+			}
+
+			.number {
+				color: #fff;
+				font-size: 18px;
+			}				
+		}
+
+	}
+
+}
+
