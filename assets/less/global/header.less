@@ -4,6 +4,7 @@
 	left: 0;
 	z-index: 100;
 	width: 100%;
+	padding-top: 15px;
 
 
 	&__logo {
@@ -16,12 +17,77 @@
 
 	&__info {
 		float: right;
+		margin-top: 14px;
 	}
+
+	&__nav {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 25px;
+
+		a {
+			position: relative;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-transform: uppercase;
+
+			&:before {
+			  content: '';
+		    position: absolute;
+		    top: 1px;
+		    left: -10px;
+		    height: 100%;
+		    border-left: 5px solid @primary;
+		    .origin(left bottom);
+		    .transform(scale(1,0));
+		    .cubic(.4s,1,0,0,1);
+			}
+
+			&:hover:before {
+		    .origin(left top);
+		    .transform(scale(1,1));
+			}
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: middle;
+
+		.caption {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 92px;
+			margin: 0 15px 0 30px;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+		}
+
+		.number {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 10px 20px;
+			border-radius: 22px;
+			background-color: @primary;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+
+
 }
 
-// hover 
+// hover
 @media only screen and (min-width: 1200px) {
-	
+
 }
 
 // desktop 1024
@@ -51,9 +117,9 @@
 			left: 0;
 			z-index: 999;
 			width: 100%;
-			padding: 10px 15px;			
+			padding: 10px 15px;
 			margin-top: 0;
-			background-color: #99d557;	
+			background-color: #99d557;
 			text-align: center;
 
 			.icon--phone {
@@ -81,7 +147,7 @@
 			.number {
 				color: #fff;
 				font-size: 18px;
-			}				
+			}
 		}
 
 	}
