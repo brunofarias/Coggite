@@ -1,17 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 330.4 327.7" style="enable-background:new 0 0 330.4 327.7;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#4B3283;stroke-width:2;}
-	.st1{fill:#01CEC7;}
-</style>
-<g id="Group_58" transform="translate(49 39)">
-	<g transform="translate(-49 -39)">
-		<path id="Path_112-2" class="st0" d="M166.4,1.4C256.2,1.4,329,74.2,329,164s-72.8,162.6-162.6,162.6S3.8,253.8,3.8,164
-			C3.6,74.4,76.1,1.6,165.7,1.4C165.9,1.4,166.2,1.4,166.4,1.4z"/>
-	</g>
-	<circle id="Ellipse_41" class="st1" cx="231.7" cy="9.6" r="8.7"/>
-	<circle id="Ellipse_42" class="st1" cx="-40" cy="161.2" r="8.7"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.758 327.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #4b3283;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #01cec7;
+      }
+    </style>
+  </defs>
+  <g id="foto_redonda_1" data-name="foto redonda 1" transform="translate(-985 -1341)">
+    <g id="Group_58" data-name="Group 58" transform="translate(988.497 1342)">
+      <circle id="Ellipse_12" data-name="Ellipse 12" class="cls-1" cx="162.63" cy="162.63" r="162.63" transform="translate(0)"/>
+      <circle id="Ellipse_41" data-name="Ellipse 41" class="cls-2" cx="8.744" cy="8.744" r="8.744" transform="translate(268.136 38.472)"/>
+    </g>
+    <circle id="Ellipse_42" data-name="Ellipse 42" class="cls-2" cx="8.744" cy="8.744" r="8.744" transform="translate(985 1532.027)"/>
+  </g>
 </svg>

@@ -1,21 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 432.2 925.2" style="enable-background:new 0 0 432.2 925.2;" xml:space="preserve">
-<style type="text/css">
-	.st0{clip-path:url(#SVGID_2_);}
-	.st1{opacity:0.81;fill:#F9F9F9;enable-background:new    ;}
-</style>
-<title>firstright</title>
-<g>
-	<defs>
-		<rect id="SVGID_1_" x="-0.8" y="-38.9" width="456" height="1003"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st0">
-		<path class="st1" d="M-15.7-33.3c0,0,178.7,366.8,399.9,673S-30.9,933.3-164.5,912.3S-90.7-108-90.7-108L-15.7-33.3z"/>
-	</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 962">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #f8f8f8;
+        opacity: 0.85;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_151" data-name="Rectangle 151" class="cls-1" width="480" height="962" transform="translate(0 1316)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_21" data-name="Mask Group 21" class="cls-2" transform="translate(0 -1316)">
+    <path id="Path_15" data-name="Path 15" class="cls-3" d="M65.909,1068.99s239.743,330.05,510.741,593.048S219.06,2023.307,83.857,2025.866-20.9,1008.558-20.9,1008.558Z" transform="translate(86.199 252.259) rotate(8)"/>
+  </g>
 </svg>

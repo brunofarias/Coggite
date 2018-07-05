@@ -198,7 +198,7 @@
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		height: 76%;
+		height: 80%;
 		border-left: 4px solid #EFEFEF;
 		border-radius: 2px;
 		.transform(translateX(-50%));
@@ -209,7 +209,7 @@
 .services {
 	position: relative;
 	z-index: 10;
-	padding-top: 80px;
+	padding: 80px 0;
 	background-color: #fff;
 	overflow: hidden;
 
@@ -244,8 +244,8 @@
 
 	&__path {
 		position: absolute;
-		width: 335px;
-		height: 590px;
+		width: 320px;
+		height: 500px;
 
 		&--right {
 			top: 0;
@@ -278,6 +278,40 @@
 				background-color: @secundary;
 			}
 		}
+	}
+
+}
+
+// vantagens
+.advantages {
+	position: relative;
+	padding: 75px 0;
+	.bg('vantagens.jpg', #3d1474 right bottom no-repeat);
+
+	.title {
+		color: #fff;
+		text-align: left;
+	}
+
+	&__list {
+		margin-top: 50px;
+	}
+
+	&__list {
+		font-size: 25px;
+		color: #fff;
+		line-height: 1.5;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 700px;
+		height: 700px;
+		opacity: .3;
+		.svg('brand.svg', 0 0 no-repeat);
 	}
 
 }
@@ -342,19 +376,32 @@
 	}
 
 	// serviços
-	// .services {
-	// 	&__path {
+	.services {
+		&__path {
 
-	// 		&--right {
-	// 			top: 0;
-	// 			right: -150px;
-	// 		}
-	// 		&--left {
-	// 			bottom: 0;
-	// 			left: -150px;
-	// 		}
-	// 	}
-	// }
+			&--right {
+				top: 0;
+				right: -150px;
+			}
+			&--left {
+				bottom: 0;
+				left: -150px;
+			}
+		}
+	}
+
+	// vantagens
+.advantages {
+	background-position: 180% bottom;
+
+	&:before {
+		left: 0px;
+		width: 500px;
+		height: 500px;
+	}
+
+}
+
 }
 
 // 1024
