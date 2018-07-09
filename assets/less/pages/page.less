@@ -279,7 +279,6 @@
 			}
 		}
 	}
-
 }
 
 // vantagens
@@ -313,11 +312,34 @@
 		opacity: .3;
 		.svg('brand.svg', 0 0 no-repeat);
 	}
+}
 
+// contato
+.contact {
+	position: relative;
+	z-index: 10;
+	padding: 65px 0 75px;
+	.svg('circles.svg', #43BABB left center repeat-x);
+
+	.title {
+		color: #fff;
+	}
+
+	&__phone {
+		text-align: center;
+	}
+
+	&__number {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 45px 6px 0;
+	}
 }
 
 // location
 .location {
+	height: 680px;
+	background-color: #fff;
 
 	.none {
 		padding: 0;
@@ -325,12 +347,12 @@
 
 	&__address {
 		float: right;
-		margin-top: 150px;
-		padding-right: 40px;
+		margin-top: 225px;
+		padding-right: 45px;
 	}
 
 	&__head {
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		font-size: 40px;
 		font-weight: 700;
 		color: @primary;
@@ -352,7 +374,7 @@
 	&__mapa {
 		display: block;
 		width: 100%;
-		height: 500px;
+		height: 680px;
 	}
 }
 

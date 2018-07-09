@@ -2,19 +2,17 @@
 function initialize() {
 
   // Exibir mapa
-  var myLatlng = new google.maps.LatLng(37.5211132,-122.2781461);
+  var myLatlng = new google.maps.LatLng(-8.036125, -34.915751);
   var mapOptions = {
-    zoom: 16,
+    zoom: 19,
     scrollwheel: false,
     center: myLatlng,
-    panControl: false,
-    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.business","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.airport","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.bus","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#cfe5ef"},{"visibility":"on"}]}]
+    panControl: false   
   }
 
   // ParÃ¢metros do texto que serÃ¡ exibido no clique
-  var contentString = '<h2>Nome do lugar</h2>' +
-  '<p>Endereço</p>' +
-  '<a href="tel:999999999">999999999</a>';
+  var contentString = '<h2>Coggite Sala de Estudos</h2>' +
+  '<p>Rua César Loureiro, 174 - Casa Forte, Recife - PE</p>';
   var infowindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 700
@@ -24,10 +22,11 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
 
   // Marcador personalizado;
-  
+  var image = 'images/misc/pin.png';
   var marcadorPersonalizado = new google.maps.Marker({
     position: myLatlng,
     map: map,
+    icon: image,
     animation: google.maps.Animation.DROP
   });
 
