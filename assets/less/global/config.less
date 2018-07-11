@@ -27,6 +27,47 @@ body {
 		text-align: center;
 	}
 
+	.form {	
+
+		.legend {
+			margin-bottom: 20px;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 130%;
+			strong {
+				display: block;
+			}
+		}
+	
+		.label {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 14px;
+			color: #fff;
+		}
+	
+		.form-control {
+			width: 100%;
+			min-height: 45px;
+			margin-bottom: 15px;
+			padding: 15px;
+			background-position: ~"calc(100% - 15px)" center;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			background-image: none;
+			border-radius: 3px;
+			color: @text;
+			font-size: 14px;
+			.transition(.3s);
+	
+			&.error {
+				background-image: url(../images/svg/cancel.svg);
+				background-size: 10px;
+			}
+		}	
+	}
+
 	.btn {
 		display: inline-block;
 		vertical-align: middle;
@@ -36,6 +77,8 @@ body {
 		font-size: 18px;
 		font-weight: 700;
 		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
 	}
 
 	//página de obrigado
