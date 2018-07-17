@@ -250,7 +250,12 @@
     <div class="contact-float">      
 
       <form action="#" method="post" class="featured__form form" id="form-float">
-        <fieldset class="row">       
+        <fieldset class="row">    
+          <div class="col-sm-12">
+            <span class="close">
+              <svg class="icon"><use xlink:href="images/svg/svg.svg#close"></use></svg>
+            </span>
+          </div>     
           <div class="col-sm-12">
             <legend class="legend"><strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
           </div>   
@@ -294,9 +299,44 @@
   <script src="js/scripts.js"></script>
 
   <script>
-    $('.footer .btn').click(function() {
-      $('.contact-float').addClass('show');
-    });    
+   (function() {
+      var content = document.querySelector( '.contact-float' ),
+          openbtn = document.querySelector( '.footer .btn' ),
+          closebtn = document.querySelector( '.contact-float .close' ),
+          isOpen = false;
+
+      function init() {
+        initEvents();
+      }
+
+      function initEvents() {
+        openbtn.addEventListener( 'click', toggleMenu );
+        if( closebtn ) {
+          closebtn.addEventListener( 'click', toggleMenu );
+        }
+
+        // close the menu element if the target itÂ´s not the menu element or one of its descendants..
+        content.addEventListener( 'click', function(ev) {
+          var target = ev.target;
+          if( isOpen && target !== openbtn ) {
+            toggleMenu();
+          }
+        });
+      }
+
+      function toggleMenu() {
+        if( isOpen ) {
+          content.classList.remove( 'show' );
+        }
+        else {
+          content.classList.add( 'show' );
+        }
+        isOpen = !isOpen;
+      }
+
+      init();
+    })();
+    
   </script>
 
 </body>
