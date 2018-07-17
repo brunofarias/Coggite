@@ -5,20 +5,21 @@ var page = {
   },
 
   geral: function() {
+
     // placeholder no ie
     $("input, textarea").placeholder();
 
     // mascara telefone
     var maskBehavior = function(val) {
-        return val.replace(/\D/g, "").length === 11
-          ? "(00) 00000-0000"
-          : "(00) 0000-00009";
+      return val.replace(/\D/g, "").length === 11
+        ? "(00) 00000-0000"
+        : "(00) 0000-00009";
       },
       options = {
-        onKeyPress: function(val, e, field, options) {
-          field.mask(maskBehavior.apply({}, arguments), options);
-        }
-      };
+      onKeyPress: function(val, e, field, options) {
+        field.mask(maskBehavior.apply({}, arguments), options);
+      }
+    };
 
     $(".telefone").mask(maskBehavior, options);
 
@@ -29,13 +30,12 @@ var page = {
           return true;
         },
         submitHandler: function(form) {
-          $("form")
-            .find("button[type='submit']")
-            .prop("disabled", true);
+          $("form").find("button[type='submit']").prop("disabled", true);
           $("form").submit();
         }
       });
     });
+    
   },
 
   slider: function() {

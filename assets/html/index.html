@@ -18,9 +18,11 @@
 
   <!-- cabeçalho -->
   <header class="header">
-    <div class="container">
+    <div class="container"> 
 
-      <h1 class="header__logo">Coggite</h1>
+      <a href="#" class="header__logo">
+        <svg class="icon"><use xlink:href="images/svg/svg.svg#logo"></use></svg>
+      </a>    
 
       <div class="header__info">
         <nav class="header__nav">
@@ -47,7 +49,9 @@
           <span class="caption">Ligue agora e sabia mais
             <strong>sobre a nossa sala</strong>
           </span>
-          <a href="tel:" class="btn">(81) 39999.9999</a>
+          <a href="tel:" class="btn">
+            <span>(81) 4004.2020</span>
+          <a>
         </div>
       </div>
 
@@ -59,34 +63,32 @@
     <!-- destaque -->
     <section class="featured">
 
-      <div class="featured__content">
-        <div class="container">
-          <h1 class="head">Aqui na Coggite você mantém o foco e a disciplina, além de ter um rendimento muito superior!</h1>
-          <form action="#" method="post" class="featured__form" id="form">
-            <fieldset class="row">
-              <div class="col-sm-12">
-                <legend class="legend">
-                  <strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
-              </div>
-              <div class="col-sm-4 col-md-12">
-                <label class="label" for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control required">
-              </div>
-              <div class="col-sm-4 col-md-12">
-                <label class="label" for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control required">
-              </div>
-              <div class="col-sm-4 col-md-12">
-                <label class="label" for="telefone">Telefone</label>
-                <input type="tel" name="telefone" id="telefone" minlength="14" class="form-control telefone required">
-              </div>
-              <div class="col-sm-12">
-                <button type="submit" class="btn">Enviar</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
+      <div class="container">
+        <h1 class="head">Aqui na Coggite você mantém o foco e a disciplina, além de ter um rendimento muito superior!</h1>
+        <form action="#" method="post" class="featured__form form" id="form">
+          <fieldset class="row">
+            <div class="col-sm-12">
+              <legend class="legend"><strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
+            </div>
+            <div class="col-sm-4 col-md-12">
+              <label class="label" for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" class="form-control required">
+            </div>
+            <div class="col-sm-4 col-md-12">
+              <label class="label" for="email">Email</label>
+              <input type="email" name="email" id="email" class="form-control required">
+            </div>
+            <div class="col-sm-4 col-md-12">
+              <label class="label" for="telefone">Telefone</label>
+              <input type="tel" name="telefone" id="telefone" minlength="14" class="form-control telefone required">
+            </div>
+            <div class="col-sm-12">
+              <button type="submit" class="btn">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
       </div>
+      
     </section>
 
     <!-- benefícios  -->
@@ -94,8 +96,7 @@
 
       <div class="container">
 
-        <h2 class="title">Porque estudar em
-          <br> uma Sala de Estudos?</h2>
+        <h2 class="title">Porque estudar em<br> uma Sala de Estudos?</h2>
 
         <article class="benefits__item">
           <div class="row">
@@ -224,8 +225,8 @@
         <h2 class="title">Entre em contato e saiba mais sobre a nossa sala</h2>
 
         <ul class="contact__phone">
-          <li class="contact__number"><a href="tel:" class="btn">(81) 9 989163.68</a></li>
-          <li class="contact__number"><a href="tel:" class="btn">(81) 9 97588965</a></li>
+          <li class="contact__number"><a href="tel:" class="btn"><span>(81) 9 989163.68</span></a></li>
+          <li class="contact__number"><a href="tel:" class="btn"><span>(81) 9 97588965</span></a></li>
         </ul>
 
       </div>
@@ -246,47 +247,57 @@
     </section>
 
     <!-- botões flutuantes -->
-    <div class="contact-float">     
-      <div class="contact-float__form">
+    <div class="contact-float">      
 
-        <a href="" class="btn">
-          <svg class="icon"><use xlink:href="images/svg/svg.svg#chat"></use></svg>
-          <span class="caption">Ei, fale conosco aqui!</span>
-        </a>
-        
-        <form action="#" method="post" class="featured__form form" id="form-float">
-          <fieldset class="row">          
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="nome-float">Nome</label>
-              <input type="text" name="nome-float" id="nome-float" class="form-control required">
-            </div>
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="email-float">Email</label>
-              <input type="email" name="email-float" id="email-float" class="form-control required">
-            </div>
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="telefone-float">Telefone</label>
-              <input type="tel" name="telefone-float" id="telefone-float" minlength="14" class="form-control telefone required">
-            </div>
-            <div class="col-sm-12">
-              <button type="submit" class="btn">Enviar</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>     
+      <form action="#" method="post" class="featured__form form" id="form-float">
+        <fieldset class="row">       
+          <div class="col-sm-12">
+            <legend class="legend"><strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
+          </div>   
+          <div class="col-sm-4 col-md-12">
+            <label class="label" for="nome-float">Nome</label>
+            <input type="text" name="nome-float" id="nome-float" class="form-control required">
+          </div>
+          <div class="col-sm-4 col-md-12">
+            <label class="label" for="email-float">Email</label>
+            <input type="email" name="email-float" id="email-float" class="form-control required">
+          </div>
+          <div class="col-sm-4 col-md-12">
+            <label class="label" for="telefone-float">Telefone</label>
+            <input type="tel" name="telefone-float" id="telefone-float" minlength="14" class="form-control telefone required">
+          </div>
+          <div class="col-sm-12">
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+        </fieldset>
+      </form>  
+
     </div>
 
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <img src="images/svg/logofooter.svg" alt="imagem contem a marca da Coggite" class="footer__logo">
+    <div class="container">      
+      <img src="images/svg/logo.svg" alt="imagem contem a marca da Coggite" class="footer__logo">
+
       <div class="footer__copy">©Coggite, 2018.  Todos os Direitos reservados</div>
+
       <address class="footer__address">Rua César Loureiro, 174 - Casa Forte, Recife - PE</address>
+
+      <div class="btn">
+        <svg class="icon"><use xlink:href="images/svg/svg.svg#chat"></use></svg>
+        <span>Ei, fale conosco aqui!</span>
+      </div>
     </div>    
   </footer>
 
   <script src="js/scripts.js"></script>
+
+  <script>
+    $('.footer .btn').click(function() {
+      $('.contact-float').addClass('show');
+    });    
+  </script>
 
 </body>
 
