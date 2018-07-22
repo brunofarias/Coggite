@@ -64,29 +64,50 @@
     <section class="featured">
 
       <div class="container">
-        <h1 class="head">Aqui na Coggite você mantém o foco e a disciplina, além de ter um rendimento muito superior!</h1>
-        <form action="#" method="post" class="featured__form form" id="form">
-          <fieldset class="row">
-            <div class="col-sm-12">
-              <legend class="legend"><strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
-            </div>
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="nome">Nome</label>
-              <input type="text" name="nome" id="nome" class="form-control required">
-            </div>
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="email">Email</label>
-              <input type="email" name="email" id="email" class="form-control required">
-            </div>
-            <div class="col-sm-4 col-md-12">
-              <label class="label" for="telefone">Telefone</label>
-              <input type="tel" name="telefone" id="telefone" minlength="14" class="form-control telefone required">
-            </div>
-            <div class="col-sm-12">
-              <button type="submit" class="btn">Enviar</button>
-            </div>
-          </fieldset>
-        </form>
+        
+        <div class="row">          
+          <div class="col-md-6 col-md-offset-6">            
+            <div class="featured__heading">
+              <h1 class="featured__head">Aqui na Coggite você mantém o foco e a disciplina, além de ter um rendimento muito superior!</h1>
+              <form action="#" method="post" class="featured__form form" id="form">
+                <fieldset class="row">
+                  <div class="col-sm-12">
+                    <legend class="legend"><strong>Reserve sua vaga</strong>Preencha o formulário e ganhe descontos exclusivos</legend>
+                  </div>
+                  <div class="col-sm-4 col-md-12">
+                    <label class="label" for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control required">
+                  </div>
+                  <div class="col-sm-4 col-md-12">
+                    <label class="label" for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control required">
+                  </div>
+                  <div class="col-sm-4 col-md-12">
+                    <label class="label" for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" minlength="14" class="form-control telefone required">
+                  </div>
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn">Enviar</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div> 
+          </div>
+        </div>
+
+        <div class="featured__shapes">
+          <img class="featured__shapes--img" src="images/misc/girl.png" alt="Imagem contem a foto de uma garota">
+          <img class="featured__shapes--brand" src="images/svg/brandtop.svg" alt="Imagem contem a logo da Coggite">
+          <svg class="featured__shapes--halfone"><use xlink:href="images/svg/svg.svg#half"></use></svg>
+          <svg class="featured__shapes--halftwo"><use xlink:href="images/svg/svg.svg#half"></use></svg>
+          <svg class="featured__shapes--halfthird"><use xlink:href="images/svg/svg.svg#half"></use></svg>
+          <svg class="featured__shapes--halffour"><use xlink:href="images/svg/svg.svg#half"></use></svg>
+          <svg class="featured__shapes--bublesone"><use xlink:href="images/svg/svg.svg#bubles"></use></svg>
+          <svg class="featured__shapes--bublestwo"><use xlink:href="images/svg/svg.svg#bubles"></use></svg>
+          <svg class="featured__shapes--bublesthird"><use xlink:href="images/svg/svg.svg#bubles"></use></svg>
+          <svg class="featured__shapes--grad"><use xlink:href="images/svg/svg.svg#grad"></use></svg>
+          <!-- <svg class="featured__shapes--right"><use xlink:href="images/svg/svg.svg#firstright"></use></svg> -->
+        </div>               
       </div>
       
     </section>
@@ -157,9 +178,9 @@
 
       </div>
 
-      <img class="benefits__path benefits__path--right" src="images/svg/firstright.svg" alt="Imagem contem um vetor">
+      <svg class="benefits__shapes benefits__shapes--right"><use xlink:href="images/svg/svg.svg#firstright"></use></svg>
+      <svg class="benefits__shapes benefits__shapes--left"><use xlink:href="images/svg/svg.svg#firstleft"></use></svg>     
 
-      <img class="benefits__path benefits__path--left" src="images/svg/firstleft.svg" alt="Imagem contem um vetor">
     </section>
 
     <!-- serviços -->
@@ -190,12 +211,13 @@
           </div>
         </div>
 
-      </div>
+      </div>      
 
-      <img class="services__path services__path--right" src="images/svg/secondright.svg" alt="Imagem contem um vetor">
+      <img class="services__shapes services__shapes--right" src="images/svg/secondright.svg" alt="Imagem contem um vetor">
+      <img class="services__shapes services__shapes--left" src="images/svg/secondleft.svg" alt="Imagem contem um vetor">
 
-      <img class="services__path services__path--left" src="images/svg/secondleft.svg" alt="Imagem contem um vetor">
     </section>
+
 
     <!-- vantagens -->
     <section class="advantages">
@@ -299,43 +321,14 @@
   <script src="js/scripts.js"></script>
 
   <script>
-   (function() {
-      var content = document.querySelector( '.contact-float' ),
-          openbtn = document.querySelector( '.footer .btn' ),
-          closebtn = document.querySelector( '.contact-float .close' ),
-          isOpen = false;
+  
+    $('.footer .btn').click(function() {
+      $('.contact-float').addClass('show');
+    });
 
-      function init() {
-        initEvents();
-      }
-
-      function initEvents() {
-        openbtn.addEventListener( 'click', toggleMenu );
-        if( closebtn ) {
-          closebtn.addEventListener( 'click', toggleMenu );
-        }
-
-        // close the menu element if the target itÂ´s not the menu element or one of its descendants..
-        content.addEventListener( 'click', function(ev) {
-          var target = ev.target;
-          if( isOpen && target !== openbtn ) {
-            toggleMenu();
-          }
-        });
-      }
-
-      function toggleMenu() {
-        if( isOpen ) {
-          content.classList.remove( 'show' );
-        }
-        else {
-          content.classList.add( 'show' );
-        }
-        isOpen = !isOpen;
-      }
-
-      init();
-    })();
+    $('.contact-float .close').click(function() {
+      $('.contact-float').removeClass('show');
+    });
     
   </script>
 

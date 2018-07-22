@@ -1,41 +1,47 @@
 // destaque
-.featured	{
-  height: 100vh;
-  .bg('banner.jpg', center top no-repeat);
-		background-size: cover;
+.featured	{	
+  height: 100vh; 
   overflow: hidden;
-	
+	background: -moz-linear-gradient(top, #49317d 0%, #4437a1 100%);
+	background: -webkit-linear-gradient(top, #49317d 0%,#4437a1 100%);
+	background: linear-gradient(to bottom, #49317d 0%,#4437a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49317d', endColorstr='#4437a1',GradientType=0 ); 
+
 	.container {
+		position: relative;
 		.flex;
-		.flex-align(center);
-		.flex-justify(space-between);
+		.flex-align(flex-end);
 		height: 100%;
-		min-height: 600px;
+	}	
+
+	&__heading {
+		margin-bottom: 50px;
 	}
 
-	.head {
-		width: 70%;
-		margin-top: 180px;
-		font-size: 35px;
+	&__head {
+		margin-bottom: 25px;
+		font-size: 34px;
 		font-weight: 700;
 		color: #fff;
+		line-height: 46px;
 	}
+	
 
-	&__form {
-		width: 30%;
-		padding: 35px 25px;
-		background-color: #594494;
-		border-radius: 12px;		
+	&__form {	
 
 		.label {
 			display: block;
 			margin-bottom: 5px;
 			font-size: 14px;
 			color: #fff;
-		}		
+		}	
+
+		.form-control {
+			max-width: 300px;
+		}	
 
 		.btn {
-			width: 100%;
+			width: 300px;
 			min-height: 45px;
 			margin-top: 15px;
 			background-color: #01CEC7;
@@ -43,6 +49,70 @@
 			font-size: 14px;			
 		}
 	}
+
+	&__shapes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&--img {
+			position: absolute;
+			left: -50px;
+			bottom: -60px;
+			z-index: 500;			
+			width: 55%;
+		}
+		
+		&--brand {
+			position: absolute;
+			top: 130px;
+			left: -250px;
+			width: 390px;
+			height: 690px;
+		}		
+
+		&--bublesone {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 900;
+			width: 300px;
+			height: 290px;
+			fill: @secundary;
+		}
+
+		&--right {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 290px;
+			height: 590px;
+			fill: #fff;
+		}
+
+		&--left {
+			bottom: 0;
+			left: 0;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -255px;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			background: #1cbcb7;
+			background: -moz-linear-gradient(top, #1cbcb7 0%, #48e9e5 100%);
+			background: -webkit-linear-gradient(top, #1cbcb7 0%,#48e9e5 100%);
+			background: linear-gradient(to bottom, #1cbcb7 0%,#48e9e5 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cbcb7', endColorstr='#48e9e5',GradientType=0 );
+
+		}
+	}
+
 }
 
 // benefícios
@@ -128,11 +198,12 @@
 		}
 	}
 
-	&__path {
+	&__shapes {
 		position: absolute;
 		z-index: -10;
 		width: 450px;
 		height: 1000px;
+		fill: #fafafa;
 
 		&--right {
 			top: 0;
@@ -191,7 +262,7 @@
 		line-height: 1.3;
 	}
 
-	&__path {
+	&__shapes {
 		position: absolute;
 		width: 320px;
 		height: 500px;
@@ -436,7 +507,7 @@
 	// benefícios
 	.benefits {
 
-		&__path {
+		&__shapes {
 
 			&--right {
 				top: 190px;
@@ -451,7 +522,7 @@
 
 	// serviços
 	.services {
-		&__path {
+		&__shapes {
 
 			&--right {
 				top: 0;
@@ -465,16 +536,16 @@
 	}
 
 	// vantagens
-.advantages {
-	background-position: 180% bottom;
+	.advantages {
+		background-position: 180% bottom;
 
-	&:before {
-		left: 0px;
-		width: 500px;
-		height: 500px;
+		&:before {
+			left: 0px;
+			width: 500px;
+			height: 500px;
+		}
+
 	}
-
-}
 
 }
 
