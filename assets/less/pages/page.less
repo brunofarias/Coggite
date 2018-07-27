@@ -10,13 +10,9 @@
 	.container {
 		position: relative;
 		.flex;
-		.flex-align(flex-end);
+		.flex-align(center);
 		height: 100%;
-	}	
-
-	&__heading {
-		margin-bottom: 50px;
-	}
+	}		
 
 	&__head {
 		margin-bottom: 25px;
@@ -59,34 +55,110 @@
 
 		&--img {
 			position: absolute;
-			left: -50px;
+			left: -190px;
 			bottom: -60px;
-			z-index: 500;			
-			width: 55%;
+			z-index: 500;	
 		}
 		
 		&--brand {
 			position: absolute;
-			top: 130px;
+			bottom: 0;
+			z-index: 100;
 			left: -250px;
-			width: 390px;
-			height: 690px;
+			width: 575px;
+			height: 900px;
 		}		
+
+		&--halfone {
+			position: absolute;
+			bottom: 100px;
+    	right: 100px;
+			z-index: 100;
+			width: 74px;
+			height: 74px;
+			fill: @primary;
+		}
+
+		&--halftwo {
+			position: absolute;
+			bottom: 175px;
+    	right: -60px;
+			z-index: 100;
+			width: 108px;
+			height: 108px;
+			fill: @secundary;
+			.transform(rotate(60deg));
+			.origin(center);
+		}
+
+		&--halftree {
+			position: absolute;
+			bottom: 330px;
+    	right: 90px;
+			z-index: 100;
+			width: 65px;
+			height: 65px;
+			fill: #fff;
+			.transform(rotate(180deg));
+			.origin(center);
+		}
+
+		&--halffour {
+			position: absolute;
+			bottom: 490px;
+    	right: 20px;
+			z-index: 100;
+			width: 70px;
+			height: 70px;
+			fill: @secundary;
+			.transform(rotate(290deg));
+			.origin(center);
+		}
 
 		&--bublesone {
 			position: absolute;
-			bottom: 0;
-			right: 0;
-			z-index: 900;
+			top: 260px;
+    	left: 250px;
+			z-index: 100;
 			width: 300px;
 			height: 290px;
 			fill: @secundary;
+		}
+
+		&--bublestwo {
+			position: absolute;
+			bottom: -170px;
+    	left: 540px;
+			z-index: 100;
+			width: 300px;
+			height: 290px;
+			fill: @primary;
+		}
+
+		&--bublestree {
+			position: absolute;
+			top: 200px;
+    	right: -200px;
+			z-index: 150;
+			width: 134px;
+			height: 128px;
+			fill: @secundary;
+		}
+
+		&--grad {
+			position: absolute;
+			top: 260px;
+			right: -235px;
+			z-index: 100;
+			width: 134px;
+			height: 128px;
 		}
 
 		&--right {
 			position: absolute;
 			bottom: 0;
 			right: 0;
+			z-index: 100;
 			width: 290px;
 			height: 590px;
 			fill: #fff;
@@ -95,14 +167,16 @@
 		&--left {
 			bottom: 0;
 			left: 0;
+			z-index: 100;
 		}
 
 		&:before {
 			content: '';
 			position: absolute;
-			left: -255px;
+			right: 845px;
 			top: 0;
-			width: 50%;
+			z-index: 50;
+			width: 150%;
 			height: 100%;
 			background: #1cbcb7;
 			background: -moz-linear-gradient(top, #1cbcb7 0%, #48e9e5 100%);
