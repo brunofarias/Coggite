@@ -24,16 +24,32 @@ var page = {
     $(".telefone").mask(maskBehavior, options);
 
     // validação
-    $("form").each(function() {
-      $(this).validate({
-        errorPlacement: function(error, element) {
-          return true;
-        },
-        submitHandler: function(form) {
-          $("form").find("button[type='submit']").prop("disabled", true);
-          $("form").submit();
-        }
-      });
+    $('#form').validate({
+      errorPlacement: function(error, element) {
+        return true;
+      },
+      submitHandler: function(form) {
+        $("form").find("button[type='submit']").prop("disabled", true);
+        $("form").submit();
+      }
+    });
+
+    $('#form-float').validate({
+      errorPlacement: function(error, element) {
+        return true;
+      },
+      submitHandler: function(form) {
+        $("form").find("button[type='submit']").prop("disabled", true);
+        $("form").submit();
+      }
+    });
+
+    $('.footer .btn').click(function () {
+      $('.contact-float').addClass('show');
+    });
+
+    $('.contact-float .close').click(function () {
+      $('.contact-float').removeClass('show');
     });
     
   },
@@ -48,11 +64,6 @@ var page = {
           loop: true
         },
         600: {
-          items: 2,
-          dots: true,
-          loop: true
-        },
-        992: {
           items: 3,
           dots: false,
           loop: false,

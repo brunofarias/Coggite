@@ -2,7 +2,7 @@
 function initialize() {
 
   // Exibir mapa
-  var myLatlng = new google.maps.LatLng(-8.036125, -34.915751);
+  var myLatlng = new google.maps.LatLng(-8.0472252,-34.8942447);
   var mapOptions = {
     zoom: 19,
     scrollwheel: false,
@@ -12,7 +12,7 @@ function initialize() {
 
   // ParÃ¢metros do texto que serÃ¡ exibido no clique
   var contentString = '<h2>Coggite Sala de Estudos</h2>' +
-  '<p>Rua César Loureiro, 174 - Casa Forte, Recife - PE</p>';
+  '<p>Rua Venezuela, 195 - Espinehiro, Recife - PE</p>';
   var infowindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 700
@@ -40,7 +40,7 @@ function initialize() {
 function loadScript() {
   var script = document.createElement("script");
   script.type = "text/javascript";
-  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCMUzSj2NGqKwQm58gAM7sMxXQzWquSmbA&callback=initialize";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyD53P6HzQvzMs9vVJgBi79xQsxa5g3YTUU&callback=initialize";
   document.body.appendChild(script);
 }
 
