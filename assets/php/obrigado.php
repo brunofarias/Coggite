@@ -3,11 +3,11 @@ require_once 'phpmailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer(true);
 $mail->IsSMTP();  // Define que a mensagem será SMTP
-$mail->Host       = 'smtp.umbler.com';
-$mail->SMTPAuth   = true;
-$mail->Port       = 587;
-$mail->Username   = 'contato@coggite.com.br';
-$mail->Password   = '#coggite';
+$mail->Host       = 'ssl://smtp.gmail.com'; 
+$mail->SMTPAuth   = true;  
+$mail->Port       = 465; 
+$mail->Username   = 'coggiteads@joggadigital.com.br';
+$mail->Password   = 'coggiteblublu';
 
 if(@$_POST['tipo'] == "contato"){
 	$nome     = $_POST['nome-float'];
@@ -21,7 +21,7 @@ if(@$_POST['tipo'] == "contato"){
 	$tipo = "Interesse";
 }
 
-$mail->Subject = 'Cliente '.$nome.'Tem Interesse na Coggite';
+$mail->Subject = 'Cliente '.$nome.' tem interesse na Coggite';
 $mail->MsgHTML("<hr>
   <P>Este email foi enviado através da Landing Coggite</P><br><br>
   <p><span style='font-size:14px; color:#c20e1a;'><b>Dados:</b></span><br>

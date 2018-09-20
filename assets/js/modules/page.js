@@ -2,6 +2,8 @@ var page = {
   init: function() {
     this.geral();
     this.slider();
+    this.header();
+    this.links();
   },
 
   geral: function() {
@@ -30,6 +32,7 @@ var page = {
       },
       submitHandler: function(form) {
         $("form").find("button[type='submit']").prop("disabled", true);
+        $("form").find(".btn span").text('Aguarde...');
         $("form").submit();
       }
     });
@@ -40,6 +43,7 @@ var page = {
       },
       submitHandler: function(form) {
         $("form").find("button[type='submit']").prop("disabled", true);
+        $("form").find(".btn span").text('Aguarde...');
         $("form").submit();
       }
     });
@@ -69,6 +73,66 @@ var page = {
           loop: false,
           mouseDrag: false
         }
+      }
+    });
+  },
+
+  header: function() {
+    if ($(document).width() > 1024) {
+      $("header.header").before(
+        $(".header")
+          .clone()
+          .addClass("fixed")
+      );
+
+      $(window).scroll(function() {
+        if ($(window).scrollTop() >= $(".featured").height() - 65) {
+          $(".header.fixed").addClass("slideDown");
+        } else {
+          $(".header.fixed").removeClass("slideDown");
+        }
+      });
+    }
+  },
+
+  links: function() {
+
+    var lastId,
+      topMenu = $(".header"),
+      topMenuHeight = topMenu.outerHeight() + 45,
+      menuItems = topMenu.find("a"),     
+      scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+          return item;
+        }
+      });
+
+    menuItems.click(function(e) {
+      var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+
+      $("html, body").stop().animate({scrollTop: offsetTop},800);
+      e.preventDefault();
+    });
+
+    $(window).scroll(function() {
+
+      var fromTop = $(this).scrollTop() + topMenuHeight;
+
+      var cur = scrollItems.map(function() {
+        if ($(this).offset().top < fromTop) return this;
+      });
+
+      cur = cur[cur.length - 1];
+      var id = cur && cur.length ? cur[0].id : "";
+
+      if (lastId !== id) {
+        lastId = id;
+       
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href='#" + id + "']").parent().addClass("active");
       }
     });
   }

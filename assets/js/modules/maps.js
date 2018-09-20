@@ -4,7 +4,7 @@ function initialize() {
   // Exibir mapa
   var myLatlng = new google.maps.LatLng(-8.0472252,-34.8942447);
   var mapOptions = {
-    zoom: 19,
+    zoom: 18,
     scrollwheel: false,
     center: myLatlng,
     panControl: false   
@@ -12,7 +12,7 @@ function initialize() {
 
   // ParÃ¢metros do texto que serÃ¡ exibido no clique
   var contentString = '<h2>Coggite Sala de Estudos</h2>' +
-  '<p>Rua Venezuela, 195 - Espinehiro, Recife - PE</p>';
+  '<p>Rua Venezuela, 195 - Espinheiro, Recife - PE</p>';
   var infowindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 700
