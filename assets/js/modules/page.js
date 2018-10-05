@@ -8,6 +8,9 @@ var page = {
 
   geral: function() {
 
+    // svg
+    svg4everybody();
+
     // placeholder no ie
     $("input, textarea").placeholder();
 

@@ -6,8 +6,8 @@ $mail->IsSMTP();  // Define que a mensagem será SMTP
 $mail->Host       = 'ssl://smtp.gmail.com'; 
 $mail->SMTPAuth   = true;  
 $mail->Port       = 465; 
-$mail->Username   = 'operacoes@joggadigital.com.br';
-$mail->Password   = 'fernanda0203';
+$mail->Username   = 'coggiteads@gmail.com';
+$mail->Password   = 'coggiteblublu';
 
 if(@$_POST['tipo'] == "contato"){
 	$nome     = $_POST['nome-float'];

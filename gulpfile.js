@@ -83,6 +83,7 @@ var global = [
   "assets/js/plugins/placeholder.js",
   "assets/js/plugins/validate.js",
   "assets/js/plugins/waypoints.js",
+  'assets/js/plugins/svg4everybody.js',
   "assets/js/modules/maps.js",
   "assets/js/modules/page.js"
 ];
